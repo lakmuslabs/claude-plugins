@@ -1,0 +1,14 @@
+{
+  "name": "lakmuslabs",
+  "owner": {
+    "name": "Lakmus Labs",
+    "url": "https://github.com/lakmuslabs"
+  },
+  "plugins": [
+    {
+      "name": "lakmus-dev",
+      "source": "./plugins/lakmus-dev",
+      "description": "Architecture-first workflow, suite and adapter skills, specialised reviewers and safety hooks for building Lakmus"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --global @anthropic-ai/claude-code
+
+      - name: Validate the plugin
+        run: claude plugin validate plugins/lakmus-dev --profile directory
+
+      - name: Hook scripts must compile
+        run: python3 -m compileall -q plugins/lakmus-dev/scripts

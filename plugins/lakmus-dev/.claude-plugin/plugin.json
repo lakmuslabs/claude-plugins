@@ -1,0 +1,13 @@
+{
+  "name": "lakmus-dev",
+  "version": "0.1.0",
+  "description": "Architecture-first workflow, suite/adapter/scorer skills, specialised reviewers and safety hooks for the Lakmus project",
+  "author": {
+    "name": "Lakmus Labs",
+    "url": "https://github.com/lakmuslabs"
+  },
+  "homepage": "https://github.com/lakmuslabs/claude-plugins",
+  "repository": "https://github.com/lakmuslabs/claude-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["lakmus", "evals", "llm-testing"]
+}
