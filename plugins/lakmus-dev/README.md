@@ -11,8 +11,9 @@ survive scrutiny. Skills and reviewers address those directly; hooks stop the re
 /plugin install lakmus-dev --marketplace lakmuslabs/claude-plugins
 ```
 
-In the `lakmus` repository this happens on its own: `.claude/settings.json` declares the
-marketplace and enables the plugin.
+The `lakmus` repository commits a `.claude/settings.json` that registers this marketplace and
+enables the plugin, but the command above is still needed there: Claude Code does not fetch a
+plugin from an external marketplace on the strength of project settings alone.
 
 ## Skills
 
